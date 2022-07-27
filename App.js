@@ -3,21 +3,26 @@ import {
   Text,
   View,
   SafeAreaView,
-  StyleSheet
+  StyleSheet,
+  ScrollView,
+  StatusBar
 } from 'react-native';
+import Post from './src/components/Posts';
+import feed from './assets/images/Airbnb Assets/Airbnb Assets/feed';
 
 import HomeScreen from './src/screens/Home';
+import SearchResultScreen from './src/screens/SearchResults';
 
 
 
 const App = () => {
   return(
     <>
-    <View>
-    
+    <StatusBar barStyle="dark-content"/>
+    <SafeAreaView>
     <HomeScreen/>
-
-    </View>
+      {/* <SearchResultScreen/> */}
+    </SafeAreaView>
     </>
   )
 }
@@ -34,3 +39,9 @@ const styles = StyleSheet.create({
   }
 
 });
+
+
+
+// {
+//   feed.map((object)=> <Post id={object} data={object}/>)
+// }

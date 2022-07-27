@@ -19,15 +19,18 @@ const styles = StyleSheet.create({
 
     },
     title:{
-        fontSize:40,
+        fontSize:35,
         fontWeight:'600',
         color:'#ffffff',
+        fontFamily:'Poppins-Italic',
     },
    
     titleText:{
-        fontSize:70,
+        fontSize:65,
         color:'#CAD5E2',
-        fontWeight:'900',
+        // fontWeight:'900',
+        fontFamily:'Poppins-Bold',
+        lineHeight:75,
     },
     button:{
         height:55,
@@ -40,10 +43,11 @@ const styles = StyleSheet.create({
         
     },
     btnText:{
-        fontSize:15,
+        fontSize:14,
         color:'#758283',
-        fontWeight:'bold',
+        // fontWeight:'bold',
         textAlign:'center',
+        fontFamily:'Poppins-Bold',
     },
     darkness:{
         backgroundColor: 'rgba(0,0,0,0.5)',
@@ -52,11 +56,12 @@ const styles = StyleSheet.create({
         justifyContent:'center',
     },
     searchbtnText:{
-        fontSize:17,
+        fontSize:15,
         color:'#758283',
-        fontWeight:'bold',
+        // fontWeight:'bold',
         textAlign:'center',
         marginLeft:10,
+        fontFamily:'Poppins-Bold',
 
     },
     searchButton:{
