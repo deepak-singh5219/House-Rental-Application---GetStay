@@ -12,6 +12,7 @@ import feed from './assets/images/Airbnb Assets/Airbnb Assets/feed';
 
 import HomeScreen from './src/screens/Home';
 import SearchResultScreen from './src/screens/SearchResults';
+import SearchScreen from './src/screens/SearchResult';
 
 
 
@@ -20,8 +21,9 @@ const App = () => {
     <>
     <StatusBar barStyle="dark-content"/>
     <SafeAreaView>
-    <HomeScreen/>
+    {/* <HomeScreen/> */}
       {/* <SearchResultScreen/> */}
+      <SearchScreen/>
     </SafeAreaView>
     </>
   )
