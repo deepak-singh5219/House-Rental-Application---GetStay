@@ -14,19 +14,15 @@ import HomeScreen from './src/screens/Home';
 import SearchResultScreen from './src/screens/SearchResults';
 import SearchScreen from './src/screens/SearchResult';
 import GuestScreen from './src/screens/GuestScreen';
-
+import Router from './src/navigation/router';
 
 
 const App = () => {
   return(
     <>
     <StatusBar barStyle="dark-content"/>
-    <SafeAreaView>
-    {/* <HomeScreen/> */}
-      {/* <SearchResultScreen/> */}
-      {/* <SearchScreen/> */}
-      <GuestScreen/>
-    </SafeAreaView>
+    <Router/>
+    
     </>
   )
 }
