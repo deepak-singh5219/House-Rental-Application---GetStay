@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
         width:'100%',
         height:'100%',
         paddingHorizontal:25,
+        backgroundColor:'#111111',
 
     },
     searchInput:{

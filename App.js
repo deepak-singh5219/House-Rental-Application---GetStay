@@ -20,7 +20,7 @@ import Router from './src/navigation/router';
 const App = () => {
   return(
     <>
-    <StatusBar barStyle="dark-content"/>
+    {/* <StatusBar barStyle="dark-content"/> */}
     <Router/>
     
     </>

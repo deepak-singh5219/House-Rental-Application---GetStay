@@ -3,15 +3,19 @@ import {
     Text, 
     View, 
     FlatList,
-    TextInput
+    TextInput,
+    Pressable
 } from 'react-native';
 import styles from './style';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Search from '../../../assets/data/Search';
+import { useNavigation } from '@react-navigation/native';
 
 
 
 const SearchScreen = ()=> {
+
+    const navigation = useNavigation();
 
     const [input,setInput] = useState('');
     return(
@@ -22,7 +26,7 @@ const SearchScreen = ()=> {
             placeholder="Where are you going?"/>
 
             <FlatList data={Search} renderItem={({item})=> (
-                <View style={styles.resultContainer}>
+                <Pressable onPress={() => navigation.navigate('Guests')} style={styles.resultContainer}>
                     <View style={styles.iconContainer}>
                         <Entypo name={"location-pin"} size={30}/>
                     </View>
@@ -31,7 +35,7 @@ const SearchScreen = ()=> {
 
                     </Text>
 
-                </View>
+                </Pressable>
             ) }/>
 
 
