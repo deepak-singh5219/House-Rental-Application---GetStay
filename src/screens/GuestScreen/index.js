@@ -7,8 +7,11 @@ import {
 
 } from 'react-native';
 import styles from './style';
+import { useNavigation } from '@react-navigation/native';
 
 const GuestScreen = () => {
+
+    const navigator = useNavigation();
 
     const [adults,setAdults] = useState(0);
     const [children,setchildren] = useState(0);
@@ -22,9 +25,9 @@ const GuestScreen = () => {
 
 </View>
 <View style={styles.rightPart}>
-    <TouchableOpacity onPress={()=> setAdults(Math.max(0,adults-1))} style={styles.btn}><Text>-</Text></TouchableOpacity>
+    <TouchableOpacity onPress={()=> setAdults(Math.max(0,adults-1))} style={styles.btn}><Text style={styles.sign}>-</Text></TouchableOpacity>
     <Text style={styles.number}>{adults}</Text>
-    <TouchableOpacity onPress={()=> setAdults(adults+1)} style={styles.btn}><Text>+</Text></TouchableOpacity>
+    <TouchableOpacity onPress={()=> setAdults(adults+1)} style={styles.btn}><Text style={styles.sign}>+</Text></TouchableOpacity>
 </View>
 
 </View>
@@ -37,12 +40,17 @@ const GuestScreen = () => {
 
             </View>
             <View style={styles.rightPart}>
-                <TouchableOpacity onPress={()=> setchildren(Math.max(0,children-1))} style={styles.btn}><Text>-</Text></TouchableOpacity>
+                <TouchableOpacity onPress={()=> setchildren(Math.max(0,children-1))} style={styles.btn}><Text style={styles.sign}>-</Text></TouchableOpacity>
                 <Text style={styles.number}>{children}</Text>
-                <TouchableOpacity onPress={()=> setchildren(children+1)} style={styles.btn}><Text>+</Text></TouchableOpacity>
+                <TouchableOpacity onPress={()=> setchildren(children+1)} style={styles.btn}><Text style={styles.sign}>+</Text></TouchableOpacity>
             </View>
 
          </View>
+
+
+         <TouchableOpacity onPress={()=>navigator.navigate('Find Places')} style={styles.findbtn}>
+            <Text style={styles.findbtntext}>Find Places</Text>
+         </TouchableOpacity>
 
         </>
 
