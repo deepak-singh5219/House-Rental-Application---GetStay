@@ -48,7 +48,13 @@ const GuestScreen = () => {
          </View>
 
 
-         <TouchableOpacity onPress={()=>navigator.navigate('Find Places')} style={styles.findbtn}>
+         <TouchableOpacity onPress={()=>navigator.navigate('Home-Screen', {
+            screen:'Explore',
+            params: {
+                screen:'Search Results'
+            },
+         })
+         } style={styles.findbtn}>
             <Text style={styles.findbtntext}>Find Places</Text>
          </TouchableOpacity>
 
