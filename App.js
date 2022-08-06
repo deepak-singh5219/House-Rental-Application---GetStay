@@ -15,6 +15,7 @@ import SearchResultScreen from './src/screens/SearchResults';
 import SearchScreen from './src/screens/SearchResult';
 import GuestScreen from './src/screens/GuestScreen';
 import Router from './src/navigation/router';
+import ViewPager from '@react-native-community/viewpager';
 
 
 const App = () => {
